@@ -44,7 +44,7 @@ ex) 3.20 전산망 장애, Stuxnet
 | 6    | 명령 (Command & Control)| 지정된 공격 목표에 원격 조작이 가능한 채널 구축 (ex: 관리자 권한 획득) | 패킷 분석, 고의적 응답 지연              |
 | 7    | 행동 (Action)          | 공격 수행 (ex: 시스템 파괴, 데이터 유출, DDoS)        | 허니팟 유인, SIEM 로그 감사              |
 
-# #64 DBD (Drive By Download)
+## #64 DBD (Drive By Download)
 
 최초의 익스플로잇 이후에 해킹 도구를 외부로부터 다운로드하는 공격 기법.
 
@@ -60,16 +60,16 @@ ex) 3.20 전산망 장애, Stuxnet
 
 ---
 
-# #65 피싱 & 스피어 피싱
+## #65 피싱 & 스피어 피싱
 
 **피싱(Phishing)**: 가짜 이메일이나 전화를 이용해 사용자를 속여 개인정보를 획득하는 기법.  
-**대응**: 2채널 인증(전화+메일), FDS(Fraud Detection System).
-
 **스피어 피싱(Spear Phishing)**: 표적화하여 개인의 관심사 및 지인을 사칭하여 메일을 열게 유도하는 기법.
+
+**대응**: 2채널 인증(전화+메일), FDS(Fraud Detection System).
 
 ---
 
-# #66 파밍
+## #66 파밍
 
 DNS 이름을 속여 이용자를 가짜 사이트로 유도하여 개인정보를 훔치는 기법.
 
@@ -83,7 +83,7 @@ DNS 이름을 속여 이용자를 가짜 사이트로 유도하여 개인정보�
 
 ---
 
-# #67 워터링 홀
+## #67 워터링 홀
 
 공격 대상이 방문할 가능성이 있는 사이트에 악성코드를 심어두고 잠복하면서 피해자의 컴퓨터에 악성 프로그램을 추가로 설치하는 공격 기법 (표적이 아니면 미공격).
 
@@ -93,18 +93,17 @@ DNS 이름을 속여 이용자를 가짜 사이트로 유도하여 개인정보�
 
 ---
 
-# #68 익스플로잇 vs 안티바이러스
+## #68 익스플로잇 vs 안티바이러스
 
 - **익스플로잇**: 프로그램의 취약점을 이용해 권한을 상승시키는 명령어 (ex: BOF, CSRF, XSS 등).
 - **안티바이러스**: 패턴을 통해 악성코드를 분석, 탐지하는 소프트웨어 (ex: 백신).
 
-하지만 제로데이와 같은 알려지지 않은 익스플로잇이 발생한다면 EDR로 대응.
-
-- **EDR(Endpoint Detection & Response)**: 엔드 포인트에서 발생하는 행위를 확인하여 실시간으로 통제하고 대응하는 솔루션.
+- 제로데이와 같은 알려지지 않은 익스플로잇이 발생한다면? EDR
+**EDR(Endpoint Detection & Response)**: 엔드 포인트에서 발생하는 행위를 확인하여 실시간으로 통제하고 대응하는 솔루션. 제로데이와 같은 알려지지 않은 익스플로잇이 발생 시 활용.
 
 ---
 
-# #69 네트워크 스니핑
+## #69 네트워크 스니핑
 
 패킷을 캡처하여 중간에서 확인하는 공격 기법 (aka 도청).
 
@@ -115,7 +114,7 @@ DNS 이름을 속여 이용자를 가짜 사이트로 유도하여 개인정보�
 
 ---
 
-# #70 세션 리플레이, 하이재킹
+## #70 세션 리플레이, 하이재킹
 
 - **세션 리플레이**: 패킷 순서나 명령어를 캡쳐, 조작, 재연하는 공격. 쿠키, 자바스크립트 등을 사용.
   1. 사용자가 웹 서버에 전송 요청
@@ -129,18 +128,15 @@ DNS 이름을 속여 이용자를 가짜 사이트로 유도하여 개인정보�
 
 ---
 
-# #71 [OWASP TOP 10](https://owasp.org/Top10/)
+## #71 [OWASP TOP 10](https://owasp.org/Top10/)
 
 OWASP(Open Web Application Security Project)에서 발표하는 웹 애플리케이션 취약점 TOP 10.
 ![image](https://github.com/user-attachments/assets/5fe34bca-a7ab-4307-afe4-90c609b9dd96)
 - **A01**: Broken Access Control (취약한 접근제어)  
-  대응: ACL의 구성, 접근 제어 감사.
 
 - **A02**: Cryptographic Failures (암호화 오류)  
-  대응: 암호화, Salt 기반 해시.
 
 - **A03**: Injection (인젝션)  
-  대응: 데이터와 명령어의 분리, 입력값 공통 필터링 적용.
 
 - **A04**: Insecure Design (안전하지 않은 설계)
 
@@ -153,24 +149,23 @@ OWASP(Open Web Application Security Project)에서 발표하는 웹 애플리케
 - **A08**: Software and Data Integrity Failures (소프트웨어 및 데이터 무결성 오류)
 
 - **A09**: Security Logging and Monitoring Failures (보안 로깅 및 모니터링 실패)  
-  대응: 통합 로그 관리 솔루션(ESM, SIEM, NMS).
 
 - **A10**: Server-Side Request Forgery (SSRF, 서버측 요청 위조)
 
 ---
 
-# #72 XSS vs CSRF
+## #72 XSS vs CSRF
 
 - **XSS(Cross-Site Scripting)**: 공격자가 웹 페이지에 악의적인 스크립트를 삽입하여 사용자의 브라우저에서 실행되게 만드는 공격. (Stored XSS, Reflected XSS)
   
 - **CSRF(Cross-Site Request Forgery)**: 사용자가 인증된 상태에서 악의적인 웹사이트가 사용자의 브라우저를 통해 원치 않는 요청을 전송하게 하는 공격.
 
-## 대응
+#### 대응
 - 사용자 입력값에 대한 검증과 필터링.
 
 ---
 
-# #73 SQL 인젝션
+## #73 SQL 인젝션
 
 웹 애플리케이션과 데이터베이스 간의 연동에서 발생하는 취약점으로, 공격자가 입력 폼에 악의적으로 조작된 쿼리를 삽입해 데이터베이스 정보를 불법적으로 열람하거나 조작할 수 있는 취약점.
 
@@ -179,7 +174,7 @@ OWASP(Open Web Application Security Project)에서 발표하는 웹 애플리케
 
 ---
 
-# #74 DoS & DDoS
+## #74 DoS & DDoS
 
 - **Dos(Denial of Service)**: 서비스 거부 공격. 서버의 자원을 고갈시켜 정상적인 서비스가 불가능하도록 만든다.
   
@@ -188,7 +183,7 @@ OWASP(Open Web Application Security Project)에서 발표하는 웹 애플리케
 
 ---
 
-# #75 DDoS 인지 & 대응 방안
+## #75 DDoS 인지 & 대응 방안
 
 #### 인지 방안
 - 유입 트래픽 크기, 웹 서버 접속 로그, 동시 접속 정보 확인.
